@@ -15,6 +15,6 @@ public class Exercise02 {
         System.out.println(Math.PI*2*r);
         System.out.print("Área cuadrado: ");
         System.out.println(Math.pow(l,2));
-        
+
     }
 }
