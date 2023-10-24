@@ -1,0 +1,15 @@
+Atajo de teclado en IntelliJ
+
+Mayusculas(Shift) + Mayusculas --> Busca ficheros, clases, carpetas, etc.
+Ctrl + E ---> Muestra ficheros de reciente aceso
+Ctrl + D ---> Duplica una linea
+Ctrl + Z ---> Deshacer
+Ctrl + Y ---> Rehacer
+Ctrl + X ---> Cortar
+Ctrl + C ---> Copiar
+Ctrl + Tab --> Alterna entre los dos últimos archivos
+Ctrl + / (DEL TECLADO NÚMERICO) --> Trasnforma en comentario
+Ctrl + Rueda de ratón --> Cambiar tamaño letras
+Ctrl sobre una variable --> enlace a esa variable
+Ctrl + Alt + L --> Arregalr presentación del codigo
+Shift + Ctrl + Flecha arriba/abaja ---> Mueve texto arriba o abajo
