@@ -9,8 +9,8 @@ public class CustomObject {
     }
 
     public void setActualFuel(int actualFuel) {
-        if (actualFuel>=0) {
-            this.actualFuel=actualFuel;
+        if (actualFuel >= 0) {
+            this.actualFuel = actualFuel;
         } else {
             System.out.println("Capacidad no puede ser negatva");
         }
