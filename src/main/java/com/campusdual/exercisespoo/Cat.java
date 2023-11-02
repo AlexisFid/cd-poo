@@ -74,8 +74,10 @@ public class Cat {
         Cat.changeHairColor(siameseCat, "Gris claro");
         Cat.changeHairColor(persianCat, "Crema");
 
-        persianCat.changeEyeColor("Azul"); // Cambiar el color de los ojos del gato persa
-        sphynxCat.changeEyeColor("Ámbar"); // Cambiar el color de los ojos del gato esfinge
+        // Cambiar color ojos del gato persa
+        persianCat.changeEyeColor("Azul");
+        // Cambiar color ojos del gato esfinge
+        sphynxCat.changeEyeColor("Ámbar");
 
         Cat.castrate(siameseCat);
         Cat.castrate(persianCat);
