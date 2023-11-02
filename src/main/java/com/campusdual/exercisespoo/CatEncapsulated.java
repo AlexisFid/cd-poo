@@ -112,11 +112,28 @@ public class CatEncapsulated {
         CatEncapsulated persianCat = new CatEncapsulated("Leo", "Persian", "Macho", 24, "Largo", "Blanco", false);
         CatEncapsulated sphynxCat = new CatEncapsulated("Peludo", "Sphynx", "Hembra", 18, "Sin pelo", "Gris", false);
 
-        // Cambiar la edad del último gato (valor negativo)
+        // Castrar dos primeros gatos (cambiar booleano a true)
+        siameseCat.setCastrated(true);
+        persianCat.setCastrated(true);
+
+        // Cambiar color del pelo dos primeros gatos
+        siameseCat.setColour("Gris Claro");
+        persianCat.setColour("Crema");
+
+        // Cambiar color ojos último gato
+        sphynxCat.setEyeColour("Ámbar");
+
+        // Cambiar edad último gato (valor negativo)
         sphynxCat.setAgeInMonths(-6);
 
+        // Mostrar detalles gato
+        System.out.println("Detalles de Mia (Siamese):");
         siameseCat.catDetails();
+
+        System.out.println("Detalles de Leo (Persian):");
         persianCat.catDetails();
+
+        System.out.println("Detalles de Peludo (Sphynx):");
         sphynxCat.catDetails();
     }
 }
