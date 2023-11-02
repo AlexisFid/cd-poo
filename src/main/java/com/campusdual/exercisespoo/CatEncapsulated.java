@@ -58,7 +58,7 @@ public class CatEncapsulated {
         if (age >= 0) {
             this.age = age;
         } else {
-            System.out.println("La edad no puede ser un valor negativo.");
+            System.out.println("La edad no puede ser negativa.");
         }
     }
 

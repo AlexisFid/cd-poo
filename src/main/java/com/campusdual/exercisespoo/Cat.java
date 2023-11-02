@@ -39,7 +39,7 @@ public class Cat {
         if (newAge >= 0) {
             cat.age = newAge;
         } else {
-            System.out.println("La edad no puede ser un valor negativo.");
+            System.out.println("La edad no puede ser negativa.");
         }
     }
 
