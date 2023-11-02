@@ -4,7 +4,7 @@ public class CatEncapsulated {
     private String name;
     private String breed;
     private String sex;
-    private int ageInMonths;
+    private int age;
     private String hair;
     private String colour;
     private boolean castrated;
@@ -12,11 +12,11 @@ public class CatEncapsulated {
     private String eyeColour = "green";
 
     // Constructor
-    public CatEncapsulated(String name, String breed, String sex, int ageInMonths, String hair, String colour, boolean castrated) {
+    public CatEncapsulated(String name, String breed, String sex, int age, String hair, String colour, boolean castrated) {
         this.name = name;
         this.breed = breed;
         this.sex = sex;
-        this.ageInMonths = ageInMonths;
+        this.age = age;
         this.hair = hair;
         this.colour = colour;
         this.castrated = castrated;
@@ -49,14 +49,14 @@ public class CatEncapsulated {
         this.sex = sex;
     }
 
-    // Getters y setters para ageInMonths
-    public int getAgeInMonths() {
-        return ageInMonths;
+    // Getters y setters para age
+    public int getAge() {
+        return age;
     }
 
-    public void setAgeInMonths(int ageInMonths) {
-        if (ageInMonths >= 0) {
-            this.ageInMonths = ageInMonths;
+    public void setAge(int age) {
+        if (age >= 0) {
+            this.age = age;
         } else {
             System.out.println("La edad no puede ser un valor negativo.");
         }
@@ -89,7 +89,7 @@ public class CatEncapsulated {
         this.castrated = castrated;
     }
 
-    // cambiar color ojos
+    // Cambiar color ojos
     public void setEyeColour(String eyeColour) {
         this.eyeColour = eyeColour;
     }
@@ -99,7 +99,7 @@ public class CatEncapsulated {
         System.out.println("Nombre: " + getName());
         System.out.println("Raza: " + getBreed());
         System.out.println("Sexo: " + getSex());
-        System.out.println("Edad: " + getAgeInMonths() + " meses");
+        System.out.println("Edad: " + getAge() + " meses");
         System.out.println("Tamaño del pelo: " + getHair());
         System.out.println("Color del pelo: " + getColour());
         System.out.println("Color de los ojos: " + eyeColour);
@@ -124,9 +124,9 @@ public class CatEncapsulated {
         sphynxCat.setEyeColour("Ámbar");
 
         // Cambiar edad último gato (valor negativo)
-        sphynxCat.setAgeInMonths(-6);
+        sphynxCat.setAge(-6);
 
-        // Mostrar detalles gato
+        // Detalles gato
         System.out.println("Detalles de Mia (Siamese):");
         siameseCat.catDetails();
 

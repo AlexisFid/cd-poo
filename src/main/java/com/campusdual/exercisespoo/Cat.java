@@ -36,7 +36,11 @@ public class Cat {
 
     // Método estático edad gato
     public static void changeAge(Cat cat, int newAge) {
-        cat.age = newAge;
+        if (newAge >= 0) {
+            cat.age = newAge;
+        } else {
+            System.out.println("La edad no puede ser un valor negativo.");
+        }
     }
 
     // Método edad de un gato
@@ -71,19 +75,29 @@ public class Cat {
         Cat siameseCat = new Cat("Mia", "Siamese", "Hembra", 12, "Corto", "Marrón", false);
         Cat persianCat = new Cat("Leo", "Persian", "Macho", 24, "Largo", "Blanco", false);
         Cat sphynxCat = new Cat("Peludo", "Sphynx", "Hembra", 18, "Sin pelo", "Gris", false);
+
+        // Cambiar color pelo dos primeros gatos
         Cat.changeHairColor(siameseCat, "Gris claro");
         Cat.changeHairColor(persianCat, "Crema");
 
-        // Cambiar color ojos gato persa
-        persianCat.changeEyeColor("Azul");
         // Cambiar color ojos gato esfinge
         sphynxCat.changeEyeColor("Ámbar");
 
+        // Castrar dos primeros gatos
         Cat.castrate(siameseCat);
         Cat.castrate(persianCat);
 
+        // Cambiar edad del último gato (valor negativo)
+        Cat.changeAge(sphynxCat,-6);
+
+        // Detalles gato
+        System.out.println("Detalles de Mia (Siamese):");
         siameseCat.catDetails();
+
+        System.out.println("Detalles de Leo (Persian):");
         persianCat.catDetails();
+
+        System.out.println("Detalles de Peludo (Sphynx):");
         sphynxCat.catDetails();
     }
 }
