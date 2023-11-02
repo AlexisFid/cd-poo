@@ -39,6 +39,7 @@ public class FreshMerchandise extends Merchandise {
     public static void main(String[] args) {
         FreshMerchandise fm = new FreshMerchandise("Mazás", "001-9", "Froitería de Onte S.L.",
                 8, "C", "114D", 53, Calendar.getInstance().getTime());
+
         fm.printSpecificDate();
     }
 }
