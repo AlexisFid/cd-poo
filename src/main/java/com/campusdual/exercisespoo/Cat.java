@@ -10,10 +10,10 @@ public class Cat {
     private String colour;
     private boolean castrated;
 
-    // Propiedad con valor inicializado
+    // Propiedad inicializada
     private static String eyeColour = "green";
 
-    // Constructor para crear un gato con propiedades iniciales
+    // Constructor
     public Cat(String name, String breed, String sex, int age, String hair, String colour, boolean castrated) {
         this.name = name;
         this.breed = breed;
@@ -24,22 +24,22 @@ public class Cat {
         this.castrated = castrated;
     }
 
-    // Método estático para cambiar el color del pelo de todos los gatos
+    // Método estático cambiar color pelo gatos
     public static void changeHairColor(Cat cat, String newColour) {
         cat.colour = newColour;
     }
 
-    // Método para cambiar el color de los ojos de un gato
+    // Método cambiar color ojos gato
     public void changeEyeColor(String newEyeColour) {
         eyeColour = newEyeColour;
     }
 
-    // Método estático para cambiar la edad de un gato
+    // Método estático edad gato
     public static void changeAge(Cat cat, int newAge) {
         cat.age = newAge;
     }
 
-    // Método para obtener la edad de un gato
+    // Método edad de un gato
     public int getAge() {
         return age;
     }
@@ -49,12 +49,12 @@ public class Cat {
         cat.castrated = true;
     }
 
-    // Método para verificar si un gato está castrado o no
+    // Método gato castrado o no
     public boolean isCastrated() {
         return castrated;
     }
 
-    // Método para mostrar las características de un gato
+    // Método características gato
     public void catDetails() {
         System.out.println("Nombre: " + name);
         System.out.println("Raza: " + breed);
@@ -74,9 +74,9 @@ public class Cat {
         Cat.changeHairColor(siameseCat, "Gris claro");
         Cat.changeHairColor(persianCat, "Crema");
 
-        // Cambiar color ojos del gato persa
+        // Cambiar color ojos gato persa
         persianCat.changeEyeColor("Azul");
-        // Cambiar color ojos del gato esfinge
+        // Cambiar color ojos gato esfinge
         sphynxCat.changeEyeColor("Ámbar");
 
         Cat.castrate(siameseCat);
