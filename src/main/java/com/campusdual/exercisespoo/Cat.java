@@ -67,6 +67,7 @@ public class Cat {
         System.out.println("Tamaño del pelo: " + this.hair);
         System.out.println("Color del pelo: " + Cat.colour);
         System.out.println("Color de los ojos: " + this.eyeColour);
+        System.out.println("Castrado: " + (this.isCastrated() ? "Sí" : "No"));
         System.out.println("================================");
     }
 
@@ -76,8 +77,8 @@ public class Cat {
         Cat sphynxCat = new Cat("Peludo", "Sphynx", "Hembra", 18, "Sin pelo", "Gris", false);
 
         // Cambiar color pelo dos primeros gatos
-        changeHairColor("Gris claro");
-        changeHairColor("Crema");
+        Cat.changeHairColor("Gris claro");
+        Cat.changeHairColor("Crema");
 
         // Cambiar color ojos gato esfinge
         sphynxCat.changeEyeColor("Ámbar");
@@ -87,7 +88,7 @@ public class Cat {
         persianCat.setCastrated(true);
 
         // Cambiar edad del último gato (valor negativo)
-        changeAge(-6);
+        Cat.changeAge(-6);
 
         // Detalles gato
         System.out.println("Detalles de Mia (Siamese):");
