@@ -5,28 +5,28 @@ public class Cat {
     private String name;
     private String breed;
     private String sex;
-    private int age;
+    private static int age;
     private String hair;
-    private String colour;
-    private boolean castrated;
+    private static String colour;
+    private static boolean castrated;
 
     // Propiedad inicializada
-    private static String eyeColour = "green";
+    private String eyeColour = "green";
 
     // Constructor
     public Cat(String name, String breed, String sex, int age, String hair, String colour, boolean castrated) {
         this.name = name;
         this.breed = breed;
         this.sex = sex;
-        this.age = age;
+        Cat.age = age;
         this.hair = hair;
-        this.colour = colour;
-        this.castrated = castrated;
+        Cat.colour = colour;
+        Cat.castrated = castrated;
     }
 
-    // Método estático cambiar color pelo gatos
-    public static void changeHairColor(Cat cat, String newColour) {
-        cat.colour = newColour;
+    // Método estático color pelo gatos
+    public static void changeHairColor(String newColour) {
+        colour = newColour;
     }
 
     // Método cambiar color ojos gato
@@ -35,39 +35,38 @@ public class Cat {
     }
 
     // Método estático edad gato
-    public static void changeAge(Cat cat, int newAge) {
+    public static void changeAge(int newAge) {
         if (newAge >= 0) {
-            cat.age = newAge;
+            age = newAge;
         } else {
             System.out.println("La edad no puede ser negativa.");
         }
     }
 
-    // Método edad de un gato
+    // Método edad gato
     public int getAge() {
-        return age;
+        return Cat.age;
     }
 
-    // Método estático para castrar un gato
-    public static void castrate(Cat cat) {
-        cat.castrated = true;
+    // Método estático castrar gato
+    public void setCastrated(boolean castrated) {
+        Cat.castrated = castrated;
     }
 
     // Método gato castrado o no
     public boolean isCastrated() {
-        return castrated;
+        return this.castrated;
     }
 
     // Método características gato
     public void catDetails() {
-        System.out.println("Nombre: " + name);
-        System.out.println("Raza: " + breed);
-        System.out.println("Sexo: " + sex);
-        System.out.println("Edad: " + age + " meses");
-        System.out.println("Tamaño del pelo: " + hair);
-        System.out.println("Color del pelo: " + colour);
-        System.out.println("Color de los ojos: " + eyeColour);
-        System.out.println("Castrado: " + (castrated ? "Sí" : "No"));
+        System.out.println("Nombre: " + this.name);
+        System.out.println("Raza: " + this.breed);
+        System.out.println("Sexo: " + this.sex);
+        System.out.println("Edad: " + Cat.age + " meses");
+        System.out.println("Tamaño del pelo: " + this.hair);
+        System.out.println("Color del pelo: " + Cat.colour);
+        System.out.println("Color de los ojos: " + this.eyeColour);
         System.out.println("================================");
     }
 
@@ -77,18 +76,18 @@ public class Cat {
         Cat sphynxCat = new Cat("Peludo", "Sphynx", "Hembra", 18, "Sin pelo", "Gris", false);
 
         // Cambiar color pelo dos primeros gatos
-        Cat.changeHairColor(siameseCat, "Gris claro");
-        Cat.changeHairColor(persianCat, "Crema");
+        changeHairColor("Gris claro");
+        changeHairColor("Crema");
 
         // Cambiar color ojos gato esfinge
         sphynxCat.changeEyeColor("Ámbar");
 
         // Castrar dos primeros gatos
-        Cat.castrate(siameseCat);
-        Cat.castrate(persianCat);
+        siameseCat.setCastrated(true);
+        persianCat.setCastrated(true);
 
         // Cambiar edad del último gato (valor negativo)
-        Cat.changeAge(sphynxCat,-6);
+        changeAge(-6);
 
         // Detalles gato
         System.out.println("Detalles de Mia (Siamese):");
