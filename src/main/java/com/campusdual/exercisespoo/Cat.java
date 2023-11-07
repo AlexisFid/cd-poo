@@ -8,7 +8,7 @@ public class Cat {
     private static int age;
     private String hair;
     private static String colour;
-    private static boolean castrated;
+    private boolean castrated;
 
     // Propiedad inicializada
     private String eyeColour = "green";
@@ -21,7 +21,7 @@ public class Cat {
         Cat.age = age;
         this.hair = hair;
         Cat.colour = colour;
-        Cat.castrated = castrated;
+        this.castrated = castrated;
     }
 
     // Método estático color pelo gatos
@@ -50,7 +50,7 @@ public class Cat {
 
     // Método estático castrar gato
     public void setCastrated(boolean castrated) {
-        Cat.castrated = castrated;
+        this.castrated = castrated;
     }
 
     // Método gato castrado o no
