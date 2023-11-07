@@ -37,7 +37,7 @@ public class Cat {
     // Método estático edad gato
     public static void changeAge(int newAge) {
         if (newAge >= 0) {
-            age = newAge;
+            Cat.age = newAge;
         } else {
             System.out.println("La edad no puede ser negativa.");
         }
