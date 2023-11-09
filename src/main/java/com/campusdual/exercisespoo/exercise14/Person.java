@@ -29,6 +29,9 @@ public class Person {
         System.out.println("El nombre de la persona es "+ this.getName() + " y su apellido es " +this.getSurname());
     }
 
+    public void getDetails() { System.out.println("Nombre: " + this.getName()+ " " +this.getSurname());
+    }
+
     public static void main(String[] args) {
         Person p1 = new Person("John", "Doe");
         p1.personalDetails();
