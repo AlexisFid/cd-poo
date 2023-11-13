@@ -1,23 +1,23 @@
 package com.campusdual.exercisespoo.exercise27;
 
 public class Exercise27 {
-    public static int division(int dividendo, int divisor){
-        try{                                                    //Crear excepción para que funcione
-            String texto = "-\\_(Ox0)_/-";
-            texto.toLowerCase();
-            System.out.println(texto);
-            return dividendo/divisor;
-        } catch (ArithmeticException e) {
-            System.out.println("No se puede dividir por 0");
-            throw e;
+    public static String division(String kaomoji, int dividendo, int divisor) throws KaomojiException{
+        try{
+            return kaomoji.toLowerCase() + ". El resultado es:  " + dividendo / divisor;
+        } catch (ArithmeticException  e){
+            return "(╯°□°）╯︵ ┻━┻ ¡Me he olvidado de como se divide!";
         } catch (NullPointerException e1){
-                System.out.println("Lo quesea");
-                throw e1;
+            throw new KaomojiException(e1.getMessage());
         } finally {
-            System.out.println("Método terminado");
+            System.out.println("Método terminado.");
         }
     }
     public static void main(String[] args) {
-        System.out.println(division(15,0));
+        try {
+            String result = division(null, 15, 0);
+            System.out.println(result);
+        }catch (KaomojiException e){
+            System.out.println("El programador no a escrito un kaomoji");
+        }
     }
 }
