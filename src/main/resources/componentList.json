@@ -1,0 +1,13 @@
+{
+  "components": [
+    {
+      "quantity": 3,
+      "text": "Ventiladores"
+    },
+    {
+      "quantity": 1,
+      "text": "Tarjeta gráfica"
+    },
+    {}
+  ]
+}
